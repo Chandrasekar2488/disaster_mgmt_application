@@ -27,6 +27,12 @@ mongoose.connect(MONGO_URL)
 // Use routes
 app.use('/emergencies', userRoutes);
 
+
+app.get('/',(req,res)=>{
+  res.send('Welcome to disaster management application : designed by chandru')
+})
+
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
